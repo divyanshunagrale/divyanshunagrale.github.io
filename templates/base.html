@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	{% if page.title %}
+	<title>{{ page.title }}</title>
+	{% else %}
+	<title>{% block title %}My Website {% endblock title %}</title>
+	{% endif %}
+	<link href="/css/style.css" rel="stylesheet"/>
+</head>
+
+<body>
+	<header>
+	<nav>
+		<ul>
+			<li><a href='/'>Home</a></li>
+			<li><a href='/blog'>Blog</a></li>
+			<li><a href='/contact'>Contact</a></li>
+		</ul>
+	</nav>
+	</header>
+	<main>
+		<div class = 'content'>
+		{% block content %} {% endblock %}
+		</div>
+	</main>
+	<footer>
+		<p>&copy; 2025 Divyanshu Nagrale</p>
+	</footer>
+</body>
+
+</html>
+
